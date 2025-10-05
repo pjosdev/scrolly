@@ -1,4 +1,4 @@
-import styles from "@/components/scrolly/scrolly-controls.module.css";
+import styles from "./scrolly-controls.module.css";
 
 interface ScrollyControlsProps {
   canGoLeft: boolean;

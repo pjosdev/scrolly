@@ -1,5 +1,5 @@
-import { generateContainerCSS } from "@/components/scrolly/helpers/helpers";
-import type { ResponsiveValue } from "@/components/scrolly/types/index";
+import { generateContainerCSS } from "../helpers/helpers";
+import type { ResponsiveValue } from "../types/index";
 import { useMemo } from "react";
 
 export function useScrollyCSS(

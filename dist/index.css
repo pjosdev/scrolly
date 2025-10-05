@@ -1,0 +1,98 @@
+.scroll-wrapper {
+  /* declare variables */
+  --scroll-margin-inline: 0;
+  --scroll-padding-inline: 0;
+  --scroll-snap-type: none;
+  --overscroll-behaviour-inline: none;
+  --scroll-snap-align: none;
+  --padding-y: 0;
+  --padding-x: 0;
+  --overflow-type: auto;
+  --gap: 0;
+  --position: relative;
+  overflow-x: var(--overflow-type);
+  gap: var(--gap);
+  overscroll-behavior-inline: var(--overscroll-behavior-inline);
+  padding: var(--padding-y, 0) var(--padding-x, 0);
+  scroll-snap-type: var(--scroll-snap-type);
+  scroll-padding-inline: var(--scroll-padding-inline);
+
+  width: 100%;
+  display: flex;
+  isolation: isolate;
+  position: var(--position);
+
+  & > * {
+    scroll-snap-align: var(--scroll-snap-align);
+    scroll-margin-inline: var(--scroll-margin-inline);
+  }
+}
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  z-index: 10;
+  /* border: 1px solid blue; */
+  pointer-events: none; /* Allow clicks through wrapper */
+}
+
+/* .wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(5px);
+  padding: 20px 0;
+  mask: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 200px,
+    rgba(0, 0, 0, 0) calc(100% - 200px),
+    rgba(0, 0, 0, 1) 100%
+  );
+  pointer-events: none;
+} */
+
+.button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+  display: flex; /* ← Missing this! */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 1);
+  border: none;
+  color: white;
+  pointer-events: auto; /* Re-enable clicks on buttons */
+}
+
+.btnWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+  padding: 0 1rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: auto; /* Re-enable clicks on buttons */
+}
+
+.btnWrapperLeft {
+  left: 0rem;
+  transform: translateX(-100%); /* Start hidden to the left */
+}
+
+.btnWrapperRight {
+  right: 0rem;
+  transform: translateX(100%); /* Start hidden to the right */
+}
+
+.btnWrapperVisible {
+  opacity: 1;
+  transform: translateX(0); /* Slide in */
+}
+

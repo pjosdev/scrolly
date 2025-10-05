@@ -1,10 +1,9 @@
-import { useId, useRef } from "react";
-import styles from "@/components/scrolly/scrolly.module.css";
-import type { ResponsiveValue } from "@/components/scrolly/types";
-import ScrollyControls from "@/components/scrolly/scrolly-controls";
-import { useScrollState } from "@/components/scrolly/hooks/useScrollState";
-import { useScrollActions } from "@/components/scrolly/hooks/useScrollAction";
-import { useScrollyCSS } from "@/components/scrolly/hooks/useScrollyCss";
+import styles from "./scrolly.module.css";
+import type { ResponsiveValue } from "./types";
+import ScrollyControls from "./scrolly-controls";
+import { useScrollState } from "./hooks/useScrollState";
+import { useScrollActions } from "./hooks/useScrollAction";
+import { useScrollyCSS } from "./hooks/useScrollyCss";
 
 interface ScrollyProps extends React.PropsWithChildren {
   paddingX?: ResponsiveValue<string>;

@@ -1,9 +1,9 @@
-import { defineConfig } from "tsdown";
+import { defineConfig } from 'tsdown';
 
 export default defineConfig({
-  entry: ["scrolly.tsx"],
-  format: ["cjs", "esm"],
+  entry: ['index.ts'], // Changed from scrolly.tsx
+  format: ['cjs', 'esm'],
   dts: true,
   clean: true,
-  external: ["react", "react-dom"],
+  external: ['react', 'react-dom'],
 });
