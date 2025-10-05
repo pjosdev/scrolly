@@ -1,0 +1,25 @@
+{
+  "name": "@pjos_dev/scrolly",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "module": "./dist/index.mj  s",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "tsdown": "latest"
+  },
+  "author": "pjos_dev",
+  "license": "ISC",
+  "description": "Supposedly makes adding scroll containers... easier... ymmv"
+}

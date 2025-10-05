@@ -1,0 +1,29 @@
+.scroll-wrapper {
+  /* declare variables */
+  --scroll-margin-inline: 0;
+  --scroll-padding-inline: 0;
+  --scroll-snap-type: none;
+  --overscroll-behaviour-inline: none;
+  --scroll-snap-align: none;
+  --padding-y: 0;
+  --padding-x: 0;
+  --overflow-type: auto;
+  --gap: 0;
+  --position: relative;
+  overflow-x: var(--overflow-type);
+  gap: var(--gap);
+  overscroll-behavior-inline: var(--overscroll-behavior-inline);
+  padding: var(--padding-y, 0) var(--padding-x, 0);
+  scroll-snap-type: var(--scroll-snap-type);
+  scroll-padding-inline: var(--scroll-padding-inline);
+
+  width: 100%;
+  display: flex;
+  isolation: isolate;
+  position: var(--position);
+
+  & > * {
+    scroll-snap-align: var(--scroll-snap-align);
+    scroll-margin-inline: var(--scroll-margin-inline);
+  }
+}
